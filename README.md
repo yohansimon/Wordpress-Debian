@@ -17,24 +17,31 @@ $ apt install php php-pclzip php-mbstring php-soap php-mysql php-curl php-xml ph
 ```
 Création de la base de données Wordpress
 ```bash
-create database wordpress;
+# create database wordpress;
 
-create user ‘wordpress’@’localhost’ identified by ‘wordpress’;
+# create user ‘wordpress’@’localhost’ identified by ‘wordpress’;
 
-grant all privileges on wordpress.* to ‘wordpress’@’localhost’ with grant option;
+# grant all privileges on wordpress.* to ‘wordpress’@’localhost’ with grant option;
 
-flush privilèges;
+# flush privilèges;
 ```
 Téléchargement de Wordpress
 ```bash
 $ wget https://wordpress.org/latest.zip
 ```
 ```bash
-$ tar -xvf "nom du fichier wordpress"
+$ unzip "nom du fichier wordpress"
 $ mv wordpress /var/www/html
 ```
 Droit d'accées Wordpress
 ```bash
 $ chown -R www-data:www-data /var/www/html/wordpress/
 $ chmod -R 755 /var/www/html/wordpress/
+```
+Redémarrage du service apache2
+```bash
+$ systemctl restart apache2
+```
+```bash
+# http://host/wordpress
 ```
