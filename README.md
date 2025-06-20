@@ -42,6 +42,7 @@ Redémarrage du service apache2
 ```bash
 $ systemctl restart apache2
 ```
+Lien sur le navigateur
 ```bash
 # http://host/wordpress
 ```
