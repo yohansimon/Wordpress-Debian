@@ -2,6 +2,7 @@
 <p align ="center">
 <img src="https://github.com/user-attachments/assets/687c397f-d999-4d7c-be7d-b6153a7a37cc" width=350>
 
+Installation d'apache et mariadb
 ```bash
 $ sudo apt install apache2 -y
 $ apt install mariadb-server -y
